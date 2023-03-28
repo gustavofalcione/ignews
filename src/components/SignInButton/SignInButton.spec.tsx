@@ -23,6 +23,11 @@ describe('SignInButton component', () => {
 
 
   it('renders correctly when user is authenticated', () => {
+
+    const useSessionMocked = jest.mocked(useSession);
+
+    useSessionMocked.mockReturnValueOnce()
+
     render(
       <SignInButton />
     )
